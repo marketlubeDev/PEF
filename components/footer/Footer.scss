@@ -19,11 +19,11 @@
     }
     
     .footer-navigation {
-      flex: 0 0 77%;
       display: flex;
+      flex: 1;
+      justify-content: space-between;
       
       .footer-column {
-        flex: 1;
         
         h3 {
           font-size: 18px;
@@ -121,6 +121,7 @@
     .copyright {
       font-size: 14px;
       color: #666;
+      font-family: inter;
     }
     
     .legal-links {
@@ -151,8 +152,8 @@
       }
       
       .footer-navigation {
-        flex: 0 0 auto;
         width: 100%;
+        justify-content: space-between;
       }
     }
   }
@@ -191,12 +192,6 @@
   .main-footer {
     padding: 35px 0 20px;
     
-    .footer-content {
-      .footer-navigation {
-        .footer-column {
-          flex: 0 0 100%;
-        }
-      }
-    }
+    
   }
 } 

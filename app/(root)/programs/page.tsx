@@ -1,22 +1,27 @@
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 const programCategories = [
   {
     title: "Medical & Healthcare",
-    image: "/images/medical.png",
+    image: "/images/Medical.jpeg",
+    link: "/programs/#medical",
   },
   {
     title: "Engineering & Technology",
-    image: "/images/engineering.png",
+    image: "/images/engineering.jpeg",
+    link: "/programs/#engineering",
   },
   {
     title: "Business & Management",
-    image: "/images/business.png",
+    image: "/images/business.jpeg",
+    link: "/programs/#business",
   },
   {
     title: "Short-Term & Vocational",
-    image: "/images/vocational.png",
+    image: "/images/short_term.jpeg",
+    link: "/programs/#vocational",
   },
 ];
 
@@ -31,6 +36,7 @@ const academicPrograms = [
       "Gain cultural and global exposure",
     ],
     duration: "Duration: 3-4 years",
+    id: "undergraduate"
   },
   {
     title: "Graduate Programs",
@@ -42,6 +48,7 @@ const academicPrograms = [
       "Research opportunities in leading institutions",
     ],
     duration: "Duration: 3-4 years",
+    id: "graduate"
   },
   {
     title: "Exchange Programs",
@@ -53,6 +60,7 @@ const academicPrograms = [
       "Cultural exchange and networking",
     ],
     duration: "Duration: 3-4 years",
+    id: "exchange"
   },
   {
     title: "Language Programs",
@@ -64,6 +72,7 @@ const academicPrograms = [
       "Experience full cultural immersion",
     ],
     duration: "Duration: 3-4 years",
+    id: "language"
   },
   {
     title: "Internship Programs",
@@ -74,6 +83,7 @@ const academicPrograms = [
       "Boost employability with global exposure",
     ],
     duration: "Duration: 3-4 years",
+    id: "internship"
   },
   {
     title: "Pathway Programs",
@@ -96,7 +106,7 @@ const Programs = () => {
           <div className="program-container">
             <div className="program-title">
               <h1 className = "mb-32">
-                Your Future, Your <span>Program</span> Find It Today
+                Your Future, Your <span>Program</span> <br />Find It Today
               </h1>
               <p className="p">
                 Find the right program that fits your career goals. Browse through
@@ -105,23 +115,22 @@ const Programs = () => {
             </div>
 
             <div className="search-container mb-80">
-              <input
-                type="text"
-                placeholder="Find programs by name, country, or category..."
-                className="search-input"
-              />
-              <button>Search</button>
+              <Link href="//api.whatsapp.com/send?phone=919895101101&text=Hi" target='_blank'><button className="mb-24">
+                Book free Consultation
+              </button></Link>
             </div>
             <div className="category-grid mb-64">
               {programCategories.map((category, index) => (
                 <div className="category-card" key={index}>
-                  <Image
-                    className="program-image"
-                    src={category.image}
-                    alt={category.title}
-                    height={100}
-                    width={100}
-                  />
+                  <Link href = {category.link}>
+                    <Image
+                      className="program-image"
+                      src={category.image}
+                      alt={category.title}
+                      height={1000}
+                      width={1000}
+                    />
+                  </Link>
                   <h5>{category.title}</h5>
                 </div>
               ))}
@@ -144,22 +153,22 @@ const Programs = () => {
             </div>
             <div className="programs-cards">
               {academicPrograms.map((program, index) => (
-                <div className="program-card" key={index}>
-                  <h2 className="h4">{program.title}</h2>
-                  <p>{program.description}</p>
-                  <div className="duration">
+                <div className="program-card" key={index} id = {program.id}>
+                  <h2 className="h4 mb-20">{program.title}</h2>
+                  <p className="program-description mb-20">{program.description}</p>
+                  <p className="duration">
                     <Image src="/images/icons/calender.png" alt="calender" height={18} width={18}/>
                     <span>{program.duration}</span>
-                  </div>
+                  </p>
                   <ul>
                     {program.details.map((item, idx) => (
                       <div className="duration" key = {idx}>
                         <Image src="/images/icons/Vector.png" alt="tick" height={18} width={18}/>
-                        <li key={idx}>{item}</li>
+                        <li key={idx}>
+                          <p>{item}</p></li>
                       </div>
                     ))}
                   </ul>
-                  <button>+ More Details</button>
                 </div>
               ))}
             </div>
@@ -167,15 +176,15 @@ const Programs = () => {
         </section>
 
         <section>
-          <div className="mb-80">
+          <div className="mb-80" id = "medical">
             <div className="medical-section-content">
               <div className="section-image">
                 <Image
                 className="medical-image"
-                  src="/images/medical.png"
+                  src="/images/Medical.jpeg"
                   alt="Medical & Healthcare"
-                  width={280}
-                  height={180}
+                  height={1000}
+                    width={1000}
                 />
               </div>
               <div className="section-details">
@@ -189,20 +198,20 @@ const Programs = () => {
                 </p>
                 <h3>We offer programs in :</h3>
                 <ul className="program-list">
-                  <li>Medicine & Surgery (MBBS, MD, BDS)</li>
-                  <li>Nursing (BSc, MSc)</li>
-                  <li>Pharmacy (BPharm, PharmD)</li>
-                  <li>
+                  <li><p>Medicine & Surgery (MBBS, MD, BDS)</p></li>
+                  <li><p>Nursing (BSc, MSc)</p></li>
+                  <li><p>Pharmacy (BPharm, PharmD)</p></li>
+                  <li><p>
                     Allied Health Sciences (Physiotherapy, Radiology, Lab
                     Technology)
-                  </li>
-                  <li>Public Health & Healthcare Management (MPH, MHA)</li>
-                  <li>Public Health & Healthcare Management (MPH, MHA)</li>
+                  </p></li>
+                  <li><p>Public Health & Healthcare Management (MPH, MHA)</p></li>
+                  <li><p>Public Health & Healthcare Management (MPH, MHA)</p></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="mb-80">
+          <div className="mb-80" id = "engineering">
             <div className="medical-section-content">
               <div className="section-details">
                 <h2>
@@ -213,34 +222,34 @@ const Programs = () => {
                 </p>
                 <h3>We offer programs in :</h3>
                 <ul className="program-list">
-                  <li>Computer Science & IT</li>
-                  <li>Mechanical Engineering</li>
-                  <li>Electrical & Electronics Engineering</li>
-                  <li>Civil & Structural Engineering</li>
-                  <li>Chemical & Environmental Engineering</li>
-                  <li>Biomedical Engineering</li>
+                  <li><p>Computer Science & IT</p></li>
+                  <li><p>Mechanical Engineering</p></li>
+                  <li><p>Electrical & Electronics Engineering</p></li>
+                  <li><p>Civil & Structural Engineering</p></li>
+                  <li><p>Chemical & Environmental Engineering</p></li>
+                  <li><p>Biomedical Engineering</p></li>
                 </ul>
               </div>
               <div className="section-image mob-order-1">
                 <Image
                 className="medical-image"
-                  src="/images/engineering.png"
+                  src="/images/engineering.jpeg"
                   alt="Medical & Healthcare"
-                  width={280}
-                  height={180}
+                  height={1000}
+                    width={1000}
                 />
               </div>
             </div>
           </div>
-          <div className="mb-80">
+          <div className="mb-80" id = "business">
             <div className="medical-section-content">
               <div className="section-image">
                 <Image
                 className="medical-image"
-                  src="/images/business.png"
+                  src="/images/business.jpeg"
                   alt="Medical & Healthcare"
-                  width={280}
-                  height={180}
+                  height={1000}
+                    width={1000}
                 />
               </div>
               <div className="section-details">
@@ -252,17 +261,17 @@ const Programs = () => {
                 </p>
                 <h3>We offer programs in :</h3>
                 <ul className="program-list">
-                  <li>Business Administration (BBA, MBA)</li>
-                  <li>Finance & Accounting</li>
-                  <li>Marketing & Digital Marketing</li>
-                  <li>Human Resource Management (HRM</li>
-                  <li>Entrepreneurship & Innovation</li>
-                  <li>Supply Chain & Logistics Management</li>
+                  <li><p>Business Administration (BBA, MBA)</p></li>
+                  <li><p>Finance & Accounting</p></li>
+                  <li><p>Marketing & Digital Marketing</p></li>
+                  <li><p>Human Resource Management (HRM)</p></li>
+                  <li><p>Entrepreneurship & Innovation</p></li>
+                  <li><p>Supply Chain & Logistics Management</p></li>
                 </ul>
               </div>
             </div>
           </div>
-          <div className="mb-80">
+          <div className="mb-80" id = "vocational">
             <div className="medical-section-content">
               <div className="section-details">
                 <h2>
@@ -273,21 +282,21 @@ const Programs = () => {
                 </p>
                 <h3>We offer programs in :</h3>
                 <ul className="program-list">
-                  <li>Culinary Arts & Hospitality</li>
-                  <li>Fashion & Design</li>
-                  <li>Film & Media Studies</li>
-                  <li>Language & Communication</li>
-                  <li>Automotive & Mechanical Trades</li>
-                  <li>Health & Wellness</li>
+                  <li><p>Culinary Arts & Hospitality</p></li>
+                  <li><p>Fashion & Design</p></li>
+                  <li><p>Film & Media Studies</p></li>
+                  <li><p>Language & Communication</p></li>
+                  <li><p>Automotive & Mechanical Trades</p></li>
+                  <li><p>Health & Wellness</p></li>
                 </ul>
               </div>
               <div className="section-image mob-order-1">
                 <Image
-                className="medical-image"
-                  src="/images/vocational.png"
+                  className="medical-image"
+                  src="/images/short_term.jpeg"
                   alt="Medical & Healthcare"
-                  width={280}
-                  height={180}
+                  height={1000}
+                    width={1000}
                 />
               </div>
             </div>

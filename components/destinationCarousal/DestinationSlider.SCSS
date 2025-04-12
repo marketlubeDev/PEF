@@ -23,7 +23,7 @@ $light-red: hsla(0, 100%, 51%, 0.056);
     
     .title {
       font-size: 36px;
-      font-weight: 700;
+      font-weight: 600;
       margin: 0 0 12px;
       color: $text-dark;
       
@@ -53,8 +53,9 @@ $light-red: hsla(0, 100%, 51%, 0.056);
   .slider-arrow {
     width: 40px;
     height: 40px;
+    padding: 0;
+    border: 1px solid #EA2029;
     background-color: $white;
-    border: none;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -67,16 +68,16 @@ $light-red: hsla(0, 100%, 51%, 0.056);
     color: $primary-color;
     
     &:hover {
-      background-color: $primary-color;
-      color: $white;
+      background-color: #fff1f2;
     }
     
     &.prev {
-      left: 20px;
+      left: 0px;
     }
     
     &.next {
-      right: 20px;
+      right: 0px;
+      transform: rotate(180deg);
     }
   }
 
@@ -93,7 +94,6 @@ $light-red: hsla(0, 100%, 51%, 0.056);
   
   .destination-card {
     width: 280px;
-    height: 320px;
     background-color: $white;
     border-radius: 10px;
     overflow: hidden;
@@ -136,6 +136,7 @@ $light-red: hsla(0, 100%, 51%, 0.056);
       height: 260px;
       width: 100%;
       overflow: hidden;
+      border-radius: 5px;
       
       .destination-img {
         width: 100%;
@@ -272,15 +273,11 @@ $light-red: hsla(0, 100%, 51%, 0.056);
     
     .destination-card {
       &.left {
-        left: calc(50% - 300px);
+        left: calc(50% - 350px);
       }
       
       &.right {
-        left: calc(50% + 300px);
-      }
-      
-      .card-image {
-        height: 190px;
+        left: calc(50% + 350px);
       }
     }
   }
@@ -294,22 +291,19 @@ $light-red: hsla(0, 100%, 51%, 0.056);
     
     .destination-card {
       width: 200px;
-      height: 250px;
       
       &.left {
-        opacity: 0.7;
-        left: calc(50% - 180px);
-        transform: translateX(-50%) rotate(-5deg) translateY(15px);
+        left: calc(50% - 270px);
+        transform: translateX(-50%) rotate(-20deg) translateY(20px);
       }
       
       &.right {
-        opacity: 0.7;
-        left: calc(50% + 180px);
-        transform: translateX(-50%) rotate(5deg) translateY(15px);
+        left: calc(50% + 270px);
+        transform: translateX(-50%) rotate(20deg) translateY(20px);
       }
       
       .card-image {
-        height: 170px;
+        height: 200px;
       }
       
       .country-name-overlay {

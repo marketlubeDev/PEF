@@ -13,7 +13,7 @@
 }
 .destination-slider .slider-header .title {
   font-size: 36px;
-  font-weight: 700;
+  font-weight: 600;
   margin: 0 0 12px;
   color: #000000;
 }
@@ -38,8 +38,9 @@
 .destination-slider .slider-arrow {
   width: 40px;
   height: 40px;
+  padding: 0;
+  border: 1px solid #EA2029;
   background-color: #FFFFFF;
-  border: none;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -52,14 +53,14 @@
   color: #ED1F24;
 }
 .destination-slider .slider-arrow:hover {
-  background-color: #ED1F24;
-  color: #FFFFFF;
+  background-color: #fff1f2;
 }
 .destination-slider .slider-arrow.prev {
-  left: 20px;
+  left: 0px;
 }
 .destination-slider .slider-arrow.next {
-  right: 20px;
+  right: 0px;
+  transform: rotate(180deg);
 }
 .destination-slider .cards-wrapper {
   display: flex;
@@ -73,7 +74,6 @@
 }
 .destination-slider .destination-card {
   width: 280px;
-  height: 320px;
   background-color: #FFFFFF;
   border-radius: 10px;
   overflow: hidden;
@@ -110,6 +110,7 @@
   height: 260px;
   width: 100%;
   overflow: hidden;
+  border-radius: 5px;
 }
 .destination-slider .destination-card .card-image .destination-img {
   width: 100%;
@@ -219,13 +220,10 @@
     height: 300px;
   }
   .destination-slider .destination-card.left {
-    left: calc(50% - 300px);
+    left: calc(50% - 350px);
   }
   .destination-slider .destination-card.right {
-    left: calc(50% + 300px);
-  }
-  .destination-slider .destination-card .card-image {
-    height: 190px;
+    left: calc(50% + 350px);
   }
 }
 @media (max-width: 576px) {
@@ -234,20 +232,17 @@
   }
   .destination-slider .destination-card {
     width: 200px;
-    height: 250px;
   }
   .destination-slider .destination-card.left {
-    opacity: 0.7;
-    left: calc(50% - 180px);
-    transform: translateX(-50%) rotate(-5deg) translateY(15px);
+    left: calc(50% - 270px);
+    transform: translateX(-50%) rotate(-20deg) translateY(20px);
   }
   .destination-slider .destination-card.right {
-    opacity: 0.7;
-    left: calc(50% + 180px);
-    transform: translateX(-50%) rotate(5deg) translateY(15px);
+    left: calc(50% + 270px);
+    transform: translateX(-50%) rotate(20deg) translateY(20px);
   }
   .destination-slider .destination-card .card-image {
-    height: 170px;
+    height: 200px;
   }
   .destination-slider .destination-card .country-name-overlay {
     font-size: 16px;

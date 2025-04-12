@@ -1,41 +1,69 @@
-h1, .h1 {
+html {
+  scroll-padding-top: 110px; /* adjust to your header height */
+  background-color: #FBFBFB;
+}
+
+h1,
+.h1 {
   font-size: 32px;
-  font-weight: bold;
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 24px;
-  font-weight: bold;
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 20px;
-  font-weight: bold;
 }
 
-h4, .h4 {
+h4,
+.h4 {
   font-size: 18px;
-  font-weight: bold;
 }
 
-h5, .h5 {
+h5,
+.h5 {
   font-size: 16px;
-  font-weight: bold;
 }
 
-h6, .h6 {
+h6,
+.h6 {
   font-size: 14px;
-  font-weight: bold;
 }
 
-h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6 {
   font-family: var(--font-poppins);
+  font-weight: 600;
 }
 
-p, .p, li {
+p,
+.p,
+li {
   font-size: 14px;
   line-height: 135%;
   font-family: var(--font-inter);
+  font-weight: 400;
+}
+
+.font-inter {
+  font-family: var(--font-inter) !important;
+}
+
+.font-poppins {
+  font-family: var(--font-poppins) !important;
 }
 
 .mb-16 {
@@ -43,7 +71,7 @@ p, .p, li {
 }
 
 .mb-20 {
-  margin-bottom: 16px;
+  margin-bottom: 20px;
 }
 
 .mb-24 {
@@ -66,8 +94,24 @@ p, .p, li {
   margin-bottom: 80px;
 }
 
+.mb-140 {
+  margin-bottom: 140px;
+}
+
+.mb-150 {
+  margin-bottom: 150px;
+}
+
+.mb-180 {
+  margin-bottom: 180px;
+}
+
 .bold {
-  font-weight: bold;
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
 }
 
 * {
@@ -76,24 +120,44 @@ p, .p, li {
   padding: 0px;
 }
 
-button, .button2, .button, .opportunities-container .program-card button:hover, .opportunities-container .program-card .button2:hover {
+.active-link {
+  color: #ea2029 !important;
+  font-weight: 600;
+}
+
+button, .button2,
+.button,
+.opportunities-container .program-card button:hover,
+.opportunities-container .program-card .button2:hover {
   color: #ffffff;
   font-size: 16px;
   height: 40px;
   padding: 0px 24px;
   background-color: #ea2029;
-  border: 2px solid #EA2029;
+  border: 2px solid #ea2029;
   border-radius: 8px;
   cursor: pointer;
   transition: all 0.4s;
 }
-button:hover, .button2:hover, .button:hover, .opportunities-container .program-card button:hover, .opportunities-container .program-card .button2:hover {
+button:hover, .button2:hover,
+.button:hover,
+.opportunities-container .program-card button:hover,
+.opportunities-container .program-card .button2:hover {
   background-color: rgba(234, 32, 41, 0.8);
+}
+button a, .button2 a,
+.button a,
+.opportunities-container .program-card button:hover a,
+.opportunities-container .program-card .button2:hover a {
+  text-decoration: none;
   color: #ffffff;
 }
 
 .button2 {
   background-color: rgba(234, 32, 41, 0.05);
+  color: #000000;
+}
+.button2 a {
   color: #000000;
 }
 
@@ -103,12 +167,16 @@ button:hover, .button2:hover, .button:hover, .opportunities-container .program-c
   padding: 0px 16px;
 }
 
+.container-md {
+  margin: auto;
+}
+
 .highlight1 {
-  color: #EA2029;
+  color: #ea2029;
 }
 
 .highlight2 {
-  color: #ED1F24;
+  color: #ed1f24;
 }
 
 .d-flex {
@@ -134,7 +202,11 @@ button:hover, .button2:hover, .button:hover, .opportunities-container .program-c
 }
 
 .show-lg {
-  display: none;
+  display: none !important;
+}
+
+.visible-lg {
+  visibility: hidden;
 }
 
 .text-center {
@@ -153,6 +225,10 @@ button:hover, .button2:hover, .button:hover, .opportunities-container .program-c
 header {
   border-bottom: 1px solid rgba(0, 0, 0, 0.1607843137);
   margin-bottom: 20px;
+  position: sticky;
+  z-index: 32;
+  top: 0px;
+  background-color: #ffffff;
 }
 
 .navbar {
@@ -162,7 +238,9 @@ header {
   align-items: center;
   height: 80px;
 }
-.navbar nav, .navbar button, .navbar .button2 {
+.navbar nav,
+.navbar button,
+.navbar .button2 {
   display: none;
 }
 .navbar nav ul {
@@ -177,6 +255,10 @@ header {
   text-decoration: none;
   font-size: 18px;
   font-family: var(--font-inter);
+}
+
+.t-dark-70 {
+  color: rgba(0, 0, 0, 0.7);
 }
 
 .sidebar {
@@ -198,7 +280,7 @@ header {
 }
 .sidebar .sidebar-header {
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-end;
   align-items: center;
   padding: 16px;
   border-bottom: 1px solid rgba(0, 0, 0, 0.1607843137);
@@ -230,7 +312,7 @@ header {
   font-family: var(--font-inter);
 }
 .sidebar .sidebar-nav ul li a:hover {
-  color: #EA2029;
+  color: #ea2029;
 }
 .sidebar .sidebar-footer {
   padding: 16px;
@@ -256,6 +338,7 @@ header {
   height: auto;
   border-radius: 12px;
   overflow: hidden;
+  transform: rotate(0deg);
 }
 
 .hero-title {
@@ -289,10 +372,10 @@ header {
 
 .features-cards {
   padding: 48px 0px;
-  display: flex;
+  display: grid;
+  grid-template-columns: 1fr;
   gap: 40px;
   color: #ffffff;
-  flex-wrap: wrap;
 }
 
 .features-card h3 {
@@ -321,7 +404,7 @@ header {
   color: #000000;
 }
 .programs-li-title:hover {
-  color: #EA2029;
+  color: #ea2029;
 }
 .programs-li-title:hover img {
   display: initial;
@@ -331,12 +414,14 @@ header {
   margin-left: 20px;
 }
 
-.home-programs li, .home-services li {
+.home-programs li,
+.home-services li {
   padding: 32px 0px;
   list-style: none;
   border-bottom: 1px solid rgba(0, 0, 0, 0.33);
 }
-.home-programs p, .home-services p {
+.home-programs p,
+.home-services p {
   margin-top: 20px;
 }
 
@@ -347,18 +432,27 @@ header {
 }
 
 #universities {
-  padding: 165px 0px;
-  background-image: url("/images/university-background.webp");
+  background-image: url("/images/University.jpeg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
   color: #ffffff;
   overflow: hidden;
 }
+#universities #universities-shade {
+  background-color: rgba(0, 0, 0, 0.4196078431);
+  padding: 165px 0px;
+}
+#universities #universities-shade .container {
+  max-width: 900px;
+}
 #universities .d-flex {
   gap: 50px;
   justify-content: center;
-  background-color: rgba(255, 255, 255, 0.4666666667);
+  background-color: rgba(255, 255, 255, 0.2);
+  border-top: 2px solid rgba(255, 255, 255, 0.1019607843);
+  border-bottom: 2px solid rgba(255, 255, 255, 0.1019607843);
+  backdrop-filter: blur(3px);
   padding: 25px 0px;
 }
 #universities img {
@@ -420,10 +514,11 @@ header {
   cursor: pointer;
 }
 
-#programs-hero-section, #destination-hero-section {
+#programs-hero-section,
+#destination-hero-section {
   background-image: url("/images/world-background.png");
   background-repeat: no-repeat;
-  background-position: top center;
+  background-position: bottom center;
 }
 
 .program-container {
@@ -437,7 +532,7 @@ header {
   max-width: 700px;
 }
 .program-container .program-title span {
-  color: #EA2029;
+  color: #ea2029;
 }
 .program-container .search-container {
   display: flex;
@@ -477,6 +572,9 @@ header {
   flex-direction: column;
   align-items: center;
 }
+.program-container .category-grid .category-card a {
+  width: 100%;
+}
 .program-container .category-grid .category-card img {
   width: 100%;
   height: 180px;
@@ -494,20 +592,22 @@ header {
   max-width: 600px;
 }
 .opportunities-container .opportunity-title span {
-  color: #EA2029;
+  color: #ea2029;
 }
 .opportunities-container .programs-cards {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 20px;
+  gap: 50px;
   width: 100%;
   margin-top: 40px;
+}
+.opportunities-container .program-description {
+  opacity: 60%;
 }
 .opportunities-container .program-card {
   display: flex;
   flex-direction: column;
   align-items: start;
-  padding: 20px;
 }
 .opportunities-container .program-card .duration {
   display: flex;
@@ -516,7 +616,7 @@ header {
 }
 .opportunities-container .program-card button, .opportunities-container .program-card .button2 {
   border: 0;
-  color: #ED1F24;
+  color: #ed1f24;
   background-color: transparent;
   padding: 0px;
 }
@@ -545,7 +645,7 @@ header {
   margin: 0 auto;
 }
 .medical-section-content span {
-  color: #EA2029;
+  color: #ea2029;
 }
 .medical-section-content .section-image {
   display: flex;
@@ -560,19 +660,18 @@ header {
 .medical-section-content li {
   position: relative;
   padding-left: 30px;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
 }
 .medical-section-content li::before {
   counter-increment: item;
   content: counter(item);
   position: absolute;
   left: 0;
-  top: 0.3rem;
   width: 1.2rem;
   height: 1.2rem;
   background-color: #ed1f24;
   color: white;
-  font-weight: bold;
+  font-weight: 600;
   border-radius: 50%;
   display: flex;
   align-items: center;
@@ -580,9 +679,14 @@ header {
   font-size: 0.7rem;
 }
 .medical-section-content .medical-image {
-  height: 256.818px;
-  align-self: stretch;
-  aspect-ratio: 396/256.82;
+  width: 100%;
+  object-fit: cover;
+  height: 300px;
+  border-radius: 20px;
+}
+
+.program-list {
+  margin-top: 40px;
 }
 
 .destination {
@@ -590,7 +694,7 @@ header {
   margin-top: 120px;
 }
 .destination span {
-  color: #ED1F24;
+  color: #ed1f24;
 }
 
 .abroad-destination {
@@ -600,7 +704,7 @@ header {
   padding: 60px 16px 120px 16px;
 }
 .abroad-destination span {
-  color: #ED1F24;
+  color: #ed1f24;
 }
 .abroad-destination .abroad-image {
   height: 272px;
@@ -626,10 +730,10 @@ header {
   content: counter(item);
   position: absolute;
   left: 0;
-  top: 0.3rem;
+  top: 0;
   width: 1.2rem;
   height: 1.2rem;
-  background-color: #ED1F24;
+  background-color: #ed1f24;
   color: #ffffff;
   border-radius: 50%;
   display: flex;
@@ -649,12 +753,12 @@ header {
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: contain;
-  background-color: #F3F3F3;
+  background-color: #f3f3f3;
   width: 100%;
   padding: 90px 0px;
 }
 .experience span {
-  color: #ED1F24;
+  color: #ed1f24;
 }
 
 .destinations-grid {
@@ -674,8 +778,7 @@ header {
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
   transition: transform 0.4s ease, box-shadow 0.4s ease;
   position: relative;
-  height: 380px;
-  width: 100%;
+  border: 4px solid white;
   cursor: pointer;
 }
 .destinations-grid .destination-card:hover {
@@ -696,8 +799,7 @@ header {
 }
 .destinations-grid .destination-card .card-image {
   position: relative;
-  height: 100%;
-  width: 100%;
+  height: 329px !important;
 }
 .destinations-grid .destination-card .card-image::before {
   content: "";
@@ -706,7 +808,6 @@ header {
   left: 0;
   right: 0;
   bottom: 0;
-  background: linear-gradient(to bottom, rgba(0, 0, 0, 0.2) 0%, rgba(0, 0, 0, 0.6) 100%);
   z-index: 1;
   opacity: 0.5;
   transition: opacity 0.5s ease;
@@ -717,19 +818,19 @@ header {
   bottom: 0;
   left: 0;
   right: 0;
-  height: 70%;
-  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 50%, rgba(0, 0, 0, 0) 100%);
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba(0, 0, 0, 0.5) 100%);
   z-index: 1;
   opacity: 0;
   transition: opacity 0.5s ease;
 }
 .destinations-grid .destination-card .card-image .destination-img {
   object-fit: cover;
-  width: 100% !important;
-  height: 100% !important;
+  height: 100%;
+  width: 100%;
   max-width: none !important;
   max-height: none !important;
-  position: absolute !important;
+  position: relative !important;
   top: 0 !important;
   left: 0 !important;
   transition: transform 0.6s ease;
@@ -775,7 +876,6 @@ header {
   color: white;
   z-index: 3;
   padding: 20px;
-  padding-top: 80px;
   transform: translateY(101%);
   transition: transform 0.6s cubic-bezier(0.19, 1, 0.22, 1);
   height: 100%;
@@ -788,7 +888,7 @@ header {
   text-shadow: 0 1px 2px rgba(0, 0, 0, 0.8);
 }
 .destinations-grid .destination-card .details-panel .detail-value {
-  font-size: 1.1rem;
+  font-size: 14px;
   margin-top: 2px;
   margin-bottom: 14px;
   font-weight: 600;
@@ -805,11 +905,20 @@ header {
   right: 0;
 }
 
-.cloud-left, .cloud-right {
+.cloud-left,
+.cloud-right {
   position: absolute;
-  z-index: -1;
+  z-index: -2;
   height: 150px;
   width: 250px;
+}
+
+.doctor-left {
+  object-fit: contain;
+  position: absolute;
+  bottom: 0px;
+  left: 20px;
+  z-index: -1;
 }
 
 .cloud-right {
@@ -826,8 +935,31 @@ header {
   order: -1;
 }
 
+.weight-500 {
+  font-weight: 500;
+}
+
+#testimonialCarousalContainer {
+  max-width: 100vw;
+  padding: 100px 0px;
+  overflow: hidden;
+}
+
+@media screen and (max-width: 744px) {
+  .destination h1 {
+    font-size: 28px;
+  }
+  .services-img {
+    height: 400px !important;
+    object-fit: cover;
+  }
+}
 @media screen and (min-width: 744px) {
-  .container {
+  .detail-value {
+    font-size: 16px !important;
+  }
+  .container,
+  .container-md {
     max-width: 1000px;
     padding: 0px 32px;
   }
@@ -842,6 +974,9 @@ header {
   }
   .home-hero-section .hero-img-container .hero-img {
     margin-bottom: 110px;
+  }
+  .features-cards {
+    grid-template-columns: 1fr 1fr;
   }
   .journey-steps-container {
     grid-template-columns: 1fr 1fr;
@@ -865,7 +1000,7 @@ header {
     width: 100%;
   }
   .medical-section-content span {
-    color: #EA2029;
+    color: #ea2029;
   }
   .medical-section-content p {
     margin: 15px 0px;
@@ -887,19 +1022,18 @@ header {
   .medical-section-content li {
     position: relative;
     padding-left: 30px;
-    margin: 15px 0px;
+    margin: 20px 0px;
   }
   .medical-section-content li::before {
     counter-increment: item;
     content: counter(item);
     position: absolute;
     left: 0;
-    top: 0.1rem;
     width: 1.2rem;
     height: 1.2rem;
     background-color: #ed1f24;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -922,39 +1056,58 @@ header {
     grid-template-columns: repeat(3, 1fr);
     gap: 30px;
   }
+  .journey-item h1 {
+    font-size: 110px;
+  }
 }
 @media screen and (min-width: 1200px) {
-  h1, .h1 {
+  h1,
+  .h1 {
     font-size: 48px;
   }
-  h2, .h2 {
+  h2,
+  .h2 {
     font-size: 40px;
   }
-  h3, .h3 {
+  h3,
+  .h3 {
     font-size: 32px;
   }
-  h4, .h4 {
+  h4,
+  .h4 {
     font-size: 28px;
   }
-  h5, .h5 {
+  h5,
+  .h5 {
     font-size: 24px;
   }
-  h6, .h6 {
+  h6,
+  .h6 {
     font-size: 20px;
   }
-  p, .p {
+  p,
+  .p {
     font-size: 18px;
   }
-  .container {
+  .container,
+  .container-md {
     max-width: 1440px;
   }
   .show-lg {
-    display: unset;
+    display: unset !important;
+  }
+  .visible-lg {
+    visibility: visible;
+  }
+  .hide-lg {
+    display: none !important;
   }
   .navbar {
     height: 88px;
   }
-  .navbar nav, .navbar button, .navbar .button2 {
+  .navbar nav,
+  .navbar button,
+  .navbar .button2 {
     display: block;
   }
   .navbar #hamburger {
@@ -979,7 +1132,7 @@ header {
     margin-bottom: 40px;
   }
   .features-cards {
-    flex-wrap: nowrap;
+    grid-template-columns: 1fr 1fr 1fr;
   }
   #home-journey {
     display: block;
@@ -997,7 +1150,8 @@ header {
   .home-services-container .home-services-title {
     order: 1;
   }
-  .home-services-container .home-services-title p, .home-services-container .home-services-title h2 {
+  .home-services-container .home-services-title p,
+  .home-services-container .home-services-title h2 {
     display: none;
   }
   .home-services-container .home-services-title img {
@@ -1054,7 +1208,7 @@ header {
     margin: 0 auto;
   }
   .medical-section-content span {
-    color: #EA2029;
+    color: #ea2029;
   }
   .medical-section-content p {
     margin: 15px 0px;
@@ -1066,7 +1220,7 @@ header {
   }
   .medical-section-content h3 {
     margin: 10px 0px;
-    font-size: 26px;
+    font-size: 20px;
   }
   .medical-section-content ul {
     counter-reset: item;
@@ -1076,19 +1230,18 @@ header {
   .medical-section-content li {
     position: relative;
     padding-left: 30px;
-    margin: 15px 0px;
+    margin: 20px 0px;
   }
   .medical-section-content li::before {
     counter-increment: item;
     content: counter(item);
     position: absolute;
     left: 0;
-    top: 0.1rem;
     width: 1.2rem;
     height: 1.2rem;
     background-color: #ed1f24;
     color: white;
-    font-weight: bold;
+    font-weight: 600;
     border-radius: 50%;
     display: flex;
     align-items: center;
@@ -1104,6 +1257,7 @@ header {
   }
   .abroad-destination-section {
     display: grid;
+    align-items: flex-end;
     gap: 80px;
     grid-template-columns: 1fr 1fr;
     direction: rtl;
@@ -1115,12 +1269,31 @@ header {
     grid-template-columns: repeat(5, 1fr);
     gap: 30px;
   }
-  .cloud-left, .cloud-right {
+  .cloud-left,
+  .cloud-right {
     bottom: 0;
     height: 200px;
     width: 400px;
   }
   .mob-order-1 {
     order: 1;
+  }
+  .deg-cap {
+    top: -40;
+    width: 450px;
+    height: 261px;
+  }
+  h5 {
+    font-weight: 500;
+  }
+  #programs-section-container {
+    margin-bottom: 120px;
+  }
+  .journey-item h1 {
+    font-size: 140px;
+  }
+  .lg-sticky-top {
+    position: sticky;
+    top: 100px;
   }
 }/*# sourceMappingURL=global.css.map */
