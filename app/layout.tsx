@@ -43,7 +43,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${inter.variable} ${poppins.variable}`}>
       <head>
-        <link rel="icon" href="/images/icons/bird.png" type="image/png" />
+        <link rel="icon" href="/bird.png" type="image/svg+xml" />
       </head>
       <body>
         <Header />
