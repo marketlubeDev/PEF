@@ -74,7 +74,10 @@ const Footer = () => {
             <Link href="https://twitter.com" aria-label="Twitter">
               <span className="twitter-icon">𝕏</span>
             </Link>
-            <Link href="https://facebook.com" aria-label="Facebook">
+            <Link
+              href="https://www.facebook.com/pefeducation/"
+              aria-label="Facebook"
+            >
               <span className="facebook-icon">f</span>
             </Link>
             <Link href="https://instagram.com" aria-label="Instagram">
@@ -111,7 +114,9 @@ const Footer = () => {
             </Link>
           </div>
 
-          <div className="copyright">© 2025 Lorem All rights reserved</div>
+          <div className="copyright">
+            © 2025 PEF Education All rights reserved
+          </div>
 
           <div className="copyright">
             Powered by{" "}
