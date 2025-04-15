@@ -3,7 +3,6 @@ import "../styles/CSS/global-min.css";
 import Header from "@/components/Header";
 import { Inter, Poppins, Bad_Script, Podkova } from "next/font/google";
 import Footer from "@/components/footer/Footer";
-import Favicon from "../public/images/icons/bird.png";
 
 const badScript = Bad_Script({
   weight: "400",
