@@ -33,7 +33,7 @@ $p-lg: 18px;
 
 html {
   scroll-padding-top: 110px; /* adjust to your header height */
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 h1,
@@ -132,8 +132,8 @@ a {
   margin: 0px;
   padding: 0px;
 }
-.active-link{
-  color: $primary-color!important;
+.active-link {
+  color: $primary-color !important;
   font-weight: 600;
 }
 button,
@@ -177,6 +177,9 @@ button,
 .highlight2 {
   color: $secondary-text-color;
 }
+// .mbbs-text {
+//   background-color: rgba(255, 255, 255, 0.4);
+// }
 .d-flex {
   display: flex;
   flex-direction: row;
@@ -562,9 +565,9 @@ header {
       display: flex;
       flex-direction: column;
       align-items: center;
-      a{
+      a {
         width: 100%;
-      };
+      }
       img {
         width: 100%;
         height: 180px;
@@ -594,7 +597,7 @@ header {
     width: 100%;
     margin-top: 40px;
   }
-  .program-description{
+  .program-description {
     opacity: 60%;
   }
   .program-card {
@@ -686,7 +689,7 @@ header {
     border-radius: 20px;
   }
 }
-.program-list{
+.program-list {
   margin-top: 40px;
 }
 .destination {
@@ -940,7 +943,7 @@ header {
   height: 150px;
   width: 250px;
 }
-.doctor-left{
+.doctor-left {
   object-fit: contain;
   position: absolute;
   bottom: 0px;
@@ -968,20 +971,18 @@ header {
   overflow: hidden;
 }
 
-
-
 @media screen and (max-width: 744px) {
-  .destination h1{
+  .destination h1 {
     font-size: 28px;
   }
-  .services-img{
-    height: 400px!important;
+  .services-img {
+    height: 400px !important;
     object-fit: cover;
   }
 }
 @media screen and (min-width: 744px) {
   .detail-value {
-    font-size: 16px!important;
+    font-size: 16px !important;
   }
   .container,
   .container-md {
@@ -1100,6 +1101,7 @@ header {
     }
   }
 }
+
 @media screen and (min-width: 1200px) {
   h1,
   .h1 {
@@ -1134,7 +1136,7 @@ header {
     max-width: 1440px;
   }
   .show-lg {
-    display: unset !important;
+    // display: unset !important;
   }
   .visible-lg {
     visibility: visible;
@@ -1153,7 +1155,7 @@ header {
     }
   }
   .detail-value {
-    font-size: 16px!important;
+    font-size: 16px !important;
   }
 
   .sidebar {
@@ -1360,5 +1362,25 @@ header {
   .lg-sticky-top {
     position: sticky;
     top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .doctor-left {
+    position: absolute;
+    left: 0px !important;
+    bottom: 0px !important;
+  }
+  .mbbstext {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .button2 {
+    background-color: rgba($primary-color, 0.2);
+  }
+}
+@media screen and (max-width: 375px) {
+  .doctor-left {
+    position: absolute;
+    left: -27px !important;
+    bottom: 0px !important;
   }
 }

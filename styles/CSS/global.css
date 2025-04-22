@@ -1,6 +1,6 @@
 html {
   scroll-padding-top: 110px; /* adjust to your header height */
-  background-color: #FBFBFB;
+  background-color: #fbfbfb;
 }
 
 h1,
@@ -383,6 +383,7 @@ header {
 }
 
 .features-icon-container {
+  width: -moz-fit-content;
   width: fit-content;
   border-radius: 50%;
   margin-bottom: 32px;
@@ -452,7 +453,8 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   border-top: 2px solid rgba(255, 255, 255, 0.1019607843);
   border-bottom: 2px solid rgba(255, 255, 255, 0.1019607843);
-  backdrop-filter: blur(3px);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
   padding: 25px 0px;
 }
 #universities img {
@@ -553,6 +555,9 @@ header {
   color: #333;
   transition: box-shadow 0.3s ease;
 }
+.program-container .search-container .search-input::-moz-placeholder {
+  color: #bbb;
+}
 .program-container .search-container .search-input::placeholder {
   color: #bbb;
 }
@@ -579,7 +584,8 @@ header {
   width: 100%;
   height: 180px;
   border-radius: 8px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .opportunities-container {
@@ -680,7 +686,8 @@ header {
 }
 .medical-section-content .medical-image {
   width: 100%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 300px;
   border-radius: 20px;
 }
@@ -710,7 +717,8 @@ header {
   height: 272px;
   width: 100%;
   align-self: stretch;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -825,7 +833,8 @@ header {
   transition: opacity 0.5s ease;
 }
 .destinations-grid .destination-card .card-image .destination-img {
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   height: 100%;
   width: 100%;
   max-width: none !important;
@@ -859,7 +868,8 @@ header {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .destinations-grid .destination-card .card-content .country-info .country-name {
@@ -914,7 +924,8 @@ header {
 }
 
 .doctor-left {
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   position: absolute;
   bottom: 0px;
   left: 20px;
@@ -951,7 +962,8 @@ header {
   }
   .services-img {
     height: 400px !important;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 @media screen and (min-width: 744px) {
@@ -1046,7 +1058,8 @@ header {
   }
   .abroad-destination .abroad-image {
     height: 432px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   .abroad-destination .ul {
     display: grid;
@@ -1092,9 +1105,6 @@ header {
   .container,
   .container-md {
     max-width: 1440px;
-  }
-  .show-lg {
-    display: unset !important;
   }
   .visible-lg {
     visibility: visible;
@@ -1160,7 +1170,8 @@ header {
   .home-services-container .home-services-title img {
     width: 100%;
     height: 450px;
-    object-fit: cover;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
   #universities .d-flex img {
     height: 80px;
@@ -1298,5 +1309,25 @@ header {
   .lg-sticky-top {
     position: sticky;
     top: 100px;
+  }
+}
+@media screen and (max-width: 768px) {
+  .doctor-left {
+    position: absolute;
+    left: 0px !important;
+    bottom: 0px !important;
+  }
+  .mbbstext {
+    background-color: rgba(255, 255, 255, 0.4);
+  }
+  .button2 {
+    background-color: rgba(234, 32, 41, 0.2);
+  }
+}
+@media screen and (max-width: 375px) {
+  .doctor-left {
+    position: absolute;
+    left: -27px !important;
+    bottom: 0px !important;
   }
 }/*# sourceMappingURL=global.css.map */
