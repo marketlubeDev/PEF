@@ -204,29 +204,34 @@ export default function Home() {
       <section id="home-mbbs">
         <div className="relative">
           <div className="container relative mbbstext">
-            <div className="d-flex justify-content-center mb-24 gap-10 flex-wrap ">
+            <div className="d-flex justify-content-center mb-24 gap-10 flex-wrap doctor-Container">
               <h2>Looking for the Best</h2>
               <Image
                 src="/images/icons/mbbs_icon.png"
                 height={56}
                 width={100}
+                className="studImg"
                 alt="PEF education MBBS"
               />
               <h2>
                 <span className="highlight2">MBBS</span> Options?
               </h2>
             </div>
-            <p className="mb-24">
+            <p className="mb-24 desktopSection">
               Find the perfect MBBS program in India or abroad with expert
               support, smooth admissions, and scholarship assistance tailored
               for you.
+            </p>
+            <p className="mobileSection">
+              Find your ideal MBBS program in India or abroad with expert help
+              and scholarship support.
             </p>
             <div className="text-center">
               <Link
                 href="//api.whatsapp.com/send?phone=919895101101&text=Hi"
                 target="_blank"
               >
-                <button className="button2">Enquire</button>
+                <button className="button2 enqbtn">Enquire</button>
               </Link>
             </div>
             <Image

@@ -971,6 +971,14 @@ header {
   overflow: hidden;
 }
 
+.mobileSection {
+  display: none;
+}
+.doctor-Container {
+  gap: 10px;
+  margin-bottom: 24px;
+  display: flex;
+}
 @media screen and (max-width: 744px) {
   .destination h1 {
     font-size: 28px;
@@ -1368,19 +1376,60 @@ header {
   .doctor-left {
     position: absolute;
     left: 0px !important;
-    bottom: 0px !important;
+    bottom: 10px !important;
   }
-  .mbbstext {
-    background-color: rgba(255, 255, 255, 0.4);
-  }
+
   .button2 {
     background-color: rgba($primary-color, 0.2);
+  }
+  .studImg {
+    display: none;
+  }
+  #home-mbbs {
+    background: linear-gradient(
+      to top,
+      #ffffff 0%,
+      #ffffffef 40%,
+      transparent 70%,
+      transparent 100%
+    );
+    p {
+      max-width: 524px;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center;
+    }
+    .container {
+      padding-top: 100px;
+      padding-bottom: 1.5rem;
+    }
+  }
+
+  .enqbtn {
+    padding: 0px 16px !important;
+    font-size: 14px !important;
+  }
+
+  .desktopSection {
+    display: none !important;
+  }
+  .mobileSection {
+    display: block;
+    margin-bottom: 8px;
+  }
+  .doctor-Container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0px;
+    margin-top: 40px;
+    margin-bottom: 0px;
   }
 }
 @media screen and (max-width: 375px) {
   .doctor-left {
     position: absolute;
-    left: -27px !important;
-    bottom: 0px !important;
+    left: -10px !important;
+    bottom: 10px !important;
   }
 }
