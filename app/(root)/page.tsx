@@ -34,14 +34,14 @@ export default function Home() {
   const handleVideoPlay = (index: number) => {
     setPlayingVideoIndex(index);
     if (swiperRef.current) {
-      swiperRef.current.swiper.autoplay.stop();
+      swiperRef.current.autoplay.stop();
     }
   };
 
   const handleVideoPause = () => {
     setPlayingVideoIndex(null);
     if (swiperRef.current) {
-      swiperRef.current.swiper.autoplay.start();
+      swiperRef.current.autoplay.start();
     }
   };
 
