@@ -5,6 +5,11 @@ import Image from "next/image";
 import Link from "next/link";
 import React, { useState, useEffect, useRef } from "react";
 import OverlappingCarousel from "@/components/testimonialCarousal/TestimonialCarousal";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Autoplay, Pagination, Navigation } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -19,6 +24,76 @@ export default function Home() {
   const target3 = 30;
 
   const [dimensions, setDimensions] = useState({ height: 300, width: 300 });
+
+  const [playingVideoIndex, setPlayingVideoIndex] = useState<number | null>(
+    null
+  );
+  const swiperRef = useRef<any>(null);
+
+  const handleVideoPlay = (index: number) => {
+    setPlayingVideoIndex(index);
+    if (swiperRef.current) {
+      swiperRef.current.swiper.autoplay.stop();
+    }
+  };
+
+  const handleVideoPause = () => {
+    setPlayingVideoIndex(null);
+    if (swiperRef.current) {
+      swiperRef.current.swiper.autoplay.start();
+    }
+  };
+
+  const videoTestimonials = [
+    {
+      videoUrl:
+        "https://res.cloudinary.com/ds07e7rod/video/upload/v1746005871/WhatsApp_Video_2025-04-30_at_14.55.53_nqynmz.mp4",
+      name: "Arjun Sharma",
+      university: "University of Toronto",
+      poster:
+        "https://res.cloudinary.com/ds07e7rod/image/upload/v1746006314/WhatsApp_Image_2025-04-30_at_15.14.31_dmymub.jpg",
+    },
+    {
+      videoUrl:
+        "https://res.cloudinary.com/ds07e7rod/video/upload/v1746005872/WhatsApp_Video_2025-04-30_at_14.55.53_1_glgn0p.mp4",
+      name: "Priya Patel",
+      university: "University of Melbourne",
+      poster:
+        "https://res.cloudinary.com/ds07e7rod/image/upload/v1746006314/WhatsApp_Image_2025-04-30_at_15.14.28_rjgefq.jpg",
+    },
+    {
+      videoUrl:
+        "https://res.cloudinary.com/ds07e7rod/video/upload/v1746005872/WhatsApp_Video_2025-04-30_at_14.55.52_ketbfl.mp4",
+      name: "Rahul Verma",
+      university: "University of British Columbia",
+      poster:
+        "https://res.cloudinary.com/ds07e7rod/image/upload/v1746006314/WhatsApp_Image_2025-04-30_at_15.14.24_ykbcpi.jpg",
+    },
+    {
+      videoUrl:
+        "https://res.cloudinary.com/ds07e7rod/video/upload/v1746005871/WhatsApp_Video_2025-04-30_at_14.55.53_nqynmz.mp4",
+      name: "Arjun Sharma",
+      university: "University of Toronto",
+      poster:
+        "https://res.cloudinary.com/ds07e7rod/image/upload/v1746006314/WhatsApp_Image_2025-04-30_at_15.14.31_dmymub.jpg",
+    },
+    {
+      videoUrl:
+        "https://res.cloudinary.com/ds07e7rod/video/upload/v1746005872/WhatsApp_Video_2025-04-30_at_14.55.53_1_glgn0p.mp4",
+      name: "Priya Patel",
+      university: "University of Melbourne",
+      poster:
+        "https://res.cloudinary.com/ds07e7rod/image/upload/v1746006314/WhatsApp_Image_2025-04-30_at_15.14.28_rjgefq.jpg",
+    },
+    {
+      videoUrl:
+        "https://res.cloudinary.com/ds07e7rod/video/upload/v1746005872/WhatsApp_Video_2025-04-30_at_14.55.52_ketbfl.mp4",
+      name: "Rahul Verma",
+      university: "University of British Columbia",
+      poster:
+        "https://res.cloudinary.com/ds07e7rod/image/upload/v1746006314/WhatsApp_Image_2025-04-30_at_15.14.24_ykbcpi.jpg",
+    },
+  ];
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -583,6 +658,76 @@ export default function Home() {
       <section id="testimonialCarousalContainer">
         <div className="container-md mb-80">
           <OverlappingCarousel />
+        </div>
+      </section>
+      <section className="mb-80">
+        <div className="container">
+          <Swiper
+            ref={swiperRef}
+            modules={[Autoplay, Pagination, Navigation]}
+            spaceBetween={30}
+            slidesPerView={1}
+            loop={true}
+            autoplay={{
+              delay: 3000,
+              disableOnInteraction: true,
+            }}
+            pagination={{
+              clickable: true,
+              el: ".swiper-pagination",
+            }}
+            navigation={{
+              nextEl: ".swiper-button-next",
+              prevEl: ".swiper-button-prev",
+            }}
+            breakpoints={{
+              320: {
+                slidesPerView: 1,
+              },
+              640: {
+                slidesPerView: 2,
+              },
+              768: {
+                slidesPerView: 2,
+              },
+              1024: {
+                slidesPerView: 3,
+              },
+              1280: {
+                slidesPerView: 4,
+              },
+            }}
+            className="video-testimonials-swiper"
+            style={{ padding: "1rem" }}
+          >
+            {videoTestimonials.map((testimonial, index) => (
+              <SwiperSlide key={index}>
+                <div className="video-testimonial">
+                  <video
+                    controls
+                    className="testimonial-video"
+                    poster={testimonial.poster}
+                    onPlay={() => handleVideoPlay(index)}
+                    onPause={handleVideoPause}
+                    onEnded={handleVideoPause}
+                    ref={(video) => {
+                      if (
+                        video &&
+                        playingVideoIndex !== null &&
+                        playingVideoIndex !== index
+                      ) {
+                        video.pause();
+                      }
+                    }}
+                  >
+                    <source src={testimonial.videoUrl} type="video/mp4" />
+                    Your browser does not support the video tag.
+                  </video>
+                </div>
+              </SwiperSlide>
+            ))}
+            <div className="swiper-pagination"></div>
+          </Swiper>
         </div>
       </section>
       <section className="mb-80">
