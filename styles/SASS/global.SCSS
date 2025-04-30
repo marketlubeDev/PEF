@@ -1466,6 +1466,10 @@ header {
   max-width: 250px;
   height: fit-content;
   border-radius: 8px;
+
+  @media screen and (max-width: 768px) {
+    max-width: 300px !important;
+  }
 }
 
 .swiper {

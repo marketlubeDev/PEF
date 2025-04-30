@@ -1406,6 +1406,11 @@ header {
   height: fit-content;
   border-radius: 8px;
 }
+@media screen and (max-width: 768px) {
+  .testimonial-video {
+    max-width: 300px !important;
+  }
+}
 
 .swiper {
   margin-left: -30px;
