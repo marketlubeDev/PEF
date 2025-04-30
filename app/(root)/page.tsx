@@ -10,6 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
+import { Swiper as SwiperCore } from "swiper";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -28,7 +29,7 @@ export default function Home() {
   const [playingVideoIndex, setPlayingVideoIndex] = useState<number | null>(
     null
   );
-  const swiperRef = useRef<any>(null);
+  const swiperRef = useRef<SwiperCore | null>(null);
 
   const handleVideoPlay = (index: number) => {
     setPlayingVideoIndex(index);
