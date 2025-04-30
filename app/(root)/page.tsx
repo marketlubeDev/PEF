@@ -10,7 +10,7 @@ import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
 import "swiper/css/navigation";
-import { Swiper as SwiperCore } from "swiper";
+import { Swiper as SwiperCore, SwiperRef } from "swiper/react";
 
 export default function Home() {
   const [isVisible, setIsVisible] = useState(false);
@@ -29,19 +29,19 @@ export default function Home() {
   const [playingVideoIndex, setPlayingVideoIndex] = useState<number | null>(
     null
   );
-  const swiperRef = useRef<SwiperCore | null>(null);
+  const swiperRef = useRef<SwiperRef | null>(null);
 
   const handleVideoPlay = (index: number) => {
     setPlayingVideoIndex(index);
     if (swiperRef.current) {
-      swiperRef.current.autoplay.stop();
+      swiperRef.current.swiper.autoplay.stop();
     }
   };
 
   const handleVideoPause = () => {
     setPlayingVideoIndex(null);
     if (swiperRef.current) {
-      swiperRef.current.autoplay.start();
+      swiperRef.current.swiper.autoplay.start();
     }
   };
 
