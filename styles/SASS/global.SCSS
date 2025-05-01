@@ -1454,21 +1454,28 @@ header {
 
 .video-testimonials-swiper {
   padding: 20px 0;
+  height: fit-content;
 }
 
 .video-testimonial {
   padding: 10px;
   text-align: center;
+
+  @media screen and (max-width: 768px) {
+    height: fit-content;
+    max-height: 35rem;
+  }
 }
 
 .testimonial-video {
   width: 100%;
-  max-width: 250px;
+  max-width: 300px;
   height: fit-content;
   border-radius: 8px;
 
   @media screen and (max-width: 768px) {
     max-width: 300px !important;
+    max-height: 30rem;
   }
 }
 

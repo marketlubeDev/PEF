@@ -5,7 +5,7 @@
   display: flex;
   align-items: center;
 }
-.lg-testimonial-text{
+.lg-testimonial-text {
   display: none;
 }
 .carousel {
@@ -25,8 +25,8 @@
   display: flex;
   align-items: center;
   overflow: hidden;
-  transition: transform 0.4s ease-in-out,
-    box-shadow 0.4s ease, filter 0.4s ease, z-index 0.2s;
+  transition: transform 0.4s ease-in-out, box-shadow 0.4s ease, filter 0.4s ease,
+    z-index 0.2s;
   transform-origin: center;
   will-change: transform, filter;
 }
@@ -123,7 +123,7 @@
   flex-wrap: nowrap;
   gap: 20px;
   // align-items: center;
-  p{
+  p {
     letter-spacing: 1px;
     opacity: 40%;
     margin-top: -3px;
@@ -169,36 +169,36 @@
     }
   }
 }
-.slide-form{
+.slide-form {
   display: flex;
   flex-direction: row;
   gap: 20px;
 }
-.testimonialBtnGroup{
+.testimonialBtnGroup {
   display: flex;
   justify-content: space-between;
 }
-.testimonial-para{
-  font-family: 'Bad Script';
+.testimonial-para {
+  font-family: "Bad Script";
   font-size: 18px;
   line-height: 185%;
   letter-spacing: 1px;
 }
 
 @media screen and (min-width: 744px) {
-  .profile-details{
+  .profile-details {
     max-width: 256px;
   }
 }
 @media screen and (min-width: 1200px) {
-  .carousel-button{
+  .carousel-button {
     height: 48px;
     width: 48px;
   }
   .carousel-slide {
     padding: 56px;
   }
-  .carousal-slide-outer{
+  .carousal-slide-outer {
     position: relative;
     display: flex;
     align-items: center;
@@ -215,14 +215,14 @@
     // }
     display: none;
   }
-  .slide-form{
+  .slide-form {
     flex-direction: column;
     flex: 100%;
     border-left: 2px solid #00000066;
     padding: 75px;
     position: relative;
   }
-  .lg-testimonial-text{
+  .lg-testimonial-text {
     display: block;
     position: absolute;
     left: -75px;
@@ -230,12 +230,12 @@
     transform: rotate(270deg);
     background-color: #fbf2bb;
     padding: 0px 20px;
-    p{
+    p {
       font-size: 24px;
       opacity: 40%;
     }
   }
-  .testimonial-para{
+  .testimonial-para {
     font-size: 28px;
     padding-left: 40px;
     margin: auto;
@@ -243,30 +243,30 @@
 
   .profile-image-wrapper {
     position: relative;
-  
+
     .profile-image {
       padding: 20px 20px 18px 20px;
       background-position: left;
       display: block;
       width: fit-content;
-  
+
       img {
         height: 170px;
         width: 170px;
       }
     }
   }
-  .profile-details{
+  .profile-details {
     min-width: 256px;
     max-width: 100%;
   }
-  .detail-value{
-    font-size: 24px!important;
+  .detail-value {
+    font-size: 24px !important;
   }
-  .detail-label{
-    font-size: 16px!important;
+  .detail-label {
+    font-size: 16px !important;
   }
-  .profile-details .detail-item{
+  .profile-details .detail-item {
     gap: 20px;
   }
 }

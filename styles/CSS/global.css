@@ -383,7 +383,6 @@ header {
 }
 
 .features-icon-container {
-  width: -moz-fit-content;
   width: fit-content;
   border-radius: 50%;
   margin-bottom: 32px;
@@ -453,8 +452,7 @@ header {
   background-color: rgba(255, 255, 255, 0.2);
   border-top: 2px solid rgba(255, 255, 255, 0.1019607843);
   border-bottom: 2px solid rgba(255, 255, 255, 0.1019607843);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
   padding: 25px 0px;
 }
 #universities img {
@@ -555,9 +553,6 @@ header {
   color: #333;
   transition: box-shadow 0.3s ease;
 }
-.program-container .search-container .search-input::-moz-placeholder {
-  color: #bbb;
-}
 .program-container .search-container .search-input::placeholder {
   color: #bbb;
 }
@@ -584,8 +579,7 @@ header {
   width: 100%;
   height: 180px;
   border-radius: 8px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
 }
 
 .opportunities-container {
@@ -686,8 +680,7 @@ header {
 }
 .medical-section-content .medical-image {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 300px;
   border-radius: 20px;
 }
@@ -717,8 +710,7 @@ header {
   height: 272px;
   width: 100%;
   align-self: stretch;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   overflow: hidden;
   border-radius: 12px;
 }
@@ -833,8 +825,7 @@ header {
   transition: opacity 0.5s ease;
 }
 .destinations-grid .destination-card .card-image .destination-img {
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   height: 100%;
   width: 100%;
   max-width: none !important;
@@ -868,8 +859,7 @@ header {
   border-radius: 50%;
   width: 24px;
   height: 24px;
-  -o-object-fit: cover;
-     object-fit: cover;
+  object-fit: cover;
   border: 1px solid rgba(255, 255, 255, 0.3);
 }
 .destinations-grid .destination-card .card-content .country-info .country-name {
@@ -924,8 +914,7 @@ header {
 }
 
 .doctor-left {
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
   position: absolute;
   bottom: 0px;
   left: 20px;
@@ -972,8 +961,7 @@ header {
   }
   .services-img {
     height: 400px !important;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
 }
 @media screen and (min-width: 744px) {
@@ -1068,8 +1056,7 @@ header {
   }
   .abroad-destination .abroad-image {
     height: 432px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   .abroad-destination .ul {
     display: grid;
@@ -1180,8 +1167,7 @@ header {
   .home-services-container .home-services-title img {
     width: 100%;
     height: 450px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    object-fit: cover;
   }
   #universities .d-flex img {
     height: 80px;
@@ -1392,23 +1378,30 @@ header {
 }
 .video-testimonials-swiper {
   padding: 20px 0;
+  height: fit-content;
 }
 
 .video-testimonial {
   padding: 10px;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .video-testimonial {
+    height: fit-content;
+    max-height: 35rem;
+  }
+}
 
 .testimonial-video {
   width: 100%;
-  max-width: 250px;
-  height: -moz-fit-content;
+  max-width: 300px;
   height: fit-content;
   border-radius: 8px;
 }
 @media screen and (max-width: 768px) {
   .testimonial-video {
     max-width: 300px !important;
+    max-height: 30rem;
   }
 }
 
