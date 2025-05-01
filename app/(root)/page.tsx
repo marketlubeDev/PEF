@@ -656,7 +656,7 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <section id="testimonialCarousalContainer" style={{ padding: "0 1rem" }}>
+      <section id="testimonialCarousalContainer">
         <div className="container-md mb-80">
           <OverlappingCarousel />
         </div>

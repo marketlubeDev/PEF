@@ -53,7 +53,7 @@ const OverlappingCarousel = () => {
 
   return (
     <div>
-      {/* <div className="carousel-container">
+      <div className="carousel-container">
         <div className="carousel" ref={slidesRef}>
           <div className="carousel-slide active">
             <div className="carousal-slide-outer">
@@ -301,7 +301,7 @@ const OverlappingCarousel = () => {
             />
           </button>
         </div>
-      </div> */}
+      </div>
     </div>
   );
 };
