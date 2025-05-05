@@ -22,7 +22,7 @@ export default function Home() {
 
   const target1 = 5000;
   const target2 = 95;
-  const target3 = 30;
+  const target3 = 200;
 
   const [dimensions, setDimensions] = useState({ height: 300, width: 300 });
 

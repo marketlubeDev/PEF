@@ -27,8 +27,6 @@ const poppins = Poppins({
   variable: "--font-poppins",
 });
 
-console.log(badScript, podkova);
-
 export const metadata: Metadata = {
   title: "PEF Education | Give wings to your dreams",
   description:
